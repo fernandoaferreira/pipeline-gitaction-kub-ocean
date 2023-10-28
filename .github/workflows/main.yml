@@ -42,7 +42,7 @@ jobs:
         uses: Azure/k8s-deploy@v4
         with:
           images: fehdocker/pipeline-kub-ocean:latest
-          manifest: |
+          manifests: |
             k8s/deployment.yaml
 
  
