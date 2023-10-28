@@ -25,5 +25,19 @@ jobs:
         push: true
         tags: 
           fehdocker/pipeline-kub-ocean:latest
+  
+  CD: 
+    runs-on: ubuntu-latest
+    needs: [CI]
+    steps:
+      - uses: actions/checkout@v4.1.1
+
+      - name: Define context kub
+        uses: azure/k8s-set-context@v3
+        with:
+          method: kubeconfig
+          kubeconfig: ${{secrets.K8S_CONFIG}}
+
+ 
           
   
