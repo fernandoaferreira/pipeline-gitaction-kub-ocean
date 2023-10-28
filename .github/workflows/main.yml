@@ -23,7 +23,8 @@ jobs:
         context: ./src
         file: ./src/Dockerfile
         push: true
-        tags: 
-          fehdocker/pipeline-kub-ocean:latest
+        tags: |
+          fehdocker/pipeline-kub-ocean:latest:v1
+          fehdocker/pipeline-kub-ocean:latest:latest
           
   
