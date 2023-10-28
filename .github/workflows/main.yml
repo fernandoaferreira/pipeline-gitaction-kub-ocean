@@ -24,6 +24,6 @@ jobs:
         file: ./src/Dockerfile
         push: true
         tags: 
-          pipeline-kub-ocean:latest
+          fehdocker/pipeline-kub-ocean:latest
           
   
