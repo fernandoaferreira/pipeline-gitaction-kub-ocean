@@ -38,6 +38,13 @@ jobs:
           method: kubeconfig
           kubeconfig: ${{secrets.K8S_CONFIG}}
 
+      - name: Deploy kubernetes
+        uses: Azure/k8s-deploy@v4
+        with:
+          images: fehdocker/pipeline-kub-ocean:latest
+          manifest: |
+            k8s/deployment.yaml
+
  
           
   
